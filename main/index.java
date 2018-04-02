@@ -55,8 +55,8 @@ public class Main {
 		}
 		
 		try {
-			ImageIO.write(img, "png", new File('colorwheel.png'));
-		} catch (e){
+			ImageIO.write(img, "png", new File("colorwheel.png"));
+		} catch (IOException e){
 			e.printStackTrace();
 		}
 	}
