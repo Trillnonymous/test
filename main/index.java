@@ -1,4 +1,10 @@
-public class Main {
+import java.awt.Color;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.io.File;
+import javax.imageio.ImageIO;
+
+public class ColorWheel {
 	public static void main (String[] args){
 		int rad = 1024;
 		BufferedImage img = new BufferedImage(rad, rad, BufferedImage.TYPE_INT_RGB);
@@ -43,7 +49,7 @@ public class Main {
 					
 					Color c = new Color(rv, gv, bv);
 					
-					float hsv = Color.RGBtoHSB(c.getRed(), c.getGreen(), c.getBlue(), null);
+					float hsv[] = Color.RGBtoHSB(c.getRed(), c.getGreen(), c.getBlue(), null);
 					
 					Color h = Color.getHSBColor(hsv[0], hsv[1], 1);
 					
